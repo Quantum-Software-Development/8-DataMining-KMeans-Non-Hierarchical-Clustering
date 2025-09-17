@@ -6,7 +6,7 @@
 
 <br><br>
 
-# 8- [Data Mining]()  / [Predictioh]()
+# 8- [Data Mining]()  / [Prediction]()
 
 
 
