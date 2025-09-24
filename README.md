@@ -185,7 +185,7 @@ print(df_norm.head())  \# Preview normalized data / visualizar dados normalizado
 <br><br>
 
 
-### Scatter Plot of Raw Data (Dark Mode, Turquoise Palette)
+### Scatter Plot of Raw Data 
 
 ```python
 # Scatter plot of Annual Income vs Spending Score, colored by Gender
