@@ -255,6 +255,31 @@ print(df[['Annual Income (k\$)', 'Spending Score (1-100)', 'Cluster']].head())
 
 
 
+### Scatter Plot with Clusters (Dark Mode, Turquoise Palette)
+
+<br>
+
+```python
+# Scatter plot with clusters in different colors (turquoise palette)
+
+# Scatter plot com clusters em cores diferentes (palette turquesa)
+
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=df, x='Annual Income (k\$)', y='Spending Score (1-100)',
+hue='Cluster', palette='turquoise', legend='full')
+plt.title('KMeans Clusters (k=5)')
+plt.show()
+
+```
+
+<br><br>
+
+
+
+
+
+
+
 
 
 
