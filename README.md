@@ -205,6 +205,54 @@ plt.show()
 <br><br>
 
 
+### Elbow Method to Determine Optimal K
+
+<br>
+
+```python
+# Elbow Method to find the ideal number of clusters k
+
+# Método do Cotovelo para definir o número ideal de clusters k
+
+wcss = []
+for k in range(1, 11):
+kmeans = KMeans(n_clusters=k, random_state=42)
+kmeans.fit(df_norm)
+wcss.append(kmeans.inertia_)
+
+plt.figure(figsize=(8, 6))
+plt.plot(range(1, 11), wcss, marker='o', color='turquoise')
+plt.title('Elbow Method')
+plt.xlabel('Number of clusters (k)')
+plt.ylabel('Within-Cluster Sum of Squares (WCSS)')
+plt.show()
+```
+
+<br><br>
+
+### Running K-Means with $\(k=5\)$
+
+<br>
+
+```python
+# Apply KMeans with k=5 and random seed=42
+
+# Aplicar KMeans com k=5 e seed=42
+
+kmeans_model = KMeans(n_clusters=5, random_state=42)
+clusters = kmeans_model.fit_predict(df_norm)
+
+# Add clusters to original dataframe
+
+# Adicionar clusters ao dataframe original
+
+df['Cluster'] = clusters
+
+print(df[['Annual Income (k\$)', 'Spending Score (1-100)', 'Cluster']].head())
+```
+
+<br><br>
+
 
 
 
