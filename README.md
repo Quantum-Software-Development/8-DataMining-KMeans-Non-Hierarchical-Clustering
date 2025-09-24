@@ -6,7 +6,7 @@
 
 <br><br>
 
-# 8- [Data Mining]()  / [Prediction]()
+# 8- [Data Mining]()  / [K-Means: Non-Hierarchical Clustering]()
 
 
 
@@ -88,8 +88,32 @@ https://github.com/user-attachments/assets/4ccd316b-74a1-4bae-9bc7-1c705be80498
 
 <!-- =======================================END DEFAULT HEADER ===========================================  -->
 
+## Theory Overview
 
 
+K-Means is a non-hierarchical clustering algorithm that partitions data into \(k\) clusters, minimizing variance within clusters.
+
+### Advantages
+- Simple and efficient
+- Scales well with large datasets
+- Fast convergence
+
+### Disadvantages
+- Requires predefined number of clusters \(k\)
+- Sensitive to initial centroids, leading sometimes to local minima
+- Assumes spherical clusters of similar sizes
+- Sensitive to outliers
+
+### Elbow Method
+
+The Elbow Method plots the Within-Cluster Sum of Squares (WCSS) versus number of clusters \(k\). The optimal \(k\) is indicated by the 'elbow' point where adding another cluster does not significantly reduce WCSS.
+
+### Clustering Algorithms Overview
+
+- K-Means (partitional, non-hierarchical)
+- Hierarchical Clustering (agglomerative and divisive)
+- DBSCAN (density-based)
+- K-Medoids and others
 
 
 
