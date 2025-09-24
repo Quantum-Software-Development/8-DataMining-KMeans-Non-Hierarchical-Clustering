@@ -88,15 +88,24 @@ https://github.com/user-attachments/assets/4ccd316b-74a1-4bae-9bc7-1c705be80498
 
 <!-- =======================================END DEFAULT HEADER ===========================================  -->
 
+
+<br><br>
+
 ## Theory Overview
+
+<br>
 
 
 K-Means is a non-hierarchical clustering algorithm that partitions data into \(k\) clusters, minimizing variance within clusters.
+
+<br>
 
 ### Advantages
 - Simple and efficient
 - Scales well with large datasets
 - Fast convergence
+
+<br>
 
 ### Disadvantages
 - Requires predefined number of clusters \(k\)
@@ -104,9 +113,14 @@ K-Means is a non-hierarchical clustering algorithm that partitions data into \(k
 - Assumes spherical clusters of similar sizes
 - Sensitive to outliers
 
+<br>
+
 ### Elbow Method
 
 The Elbow Method plots the Within-Cluster Sum of Squares (WCSS) versus number of clusters \(k\). The optimal \(k\) is indicated by the 'elbow' point where adding another cluster does not significantly reduce WCSS.
+
+<br><br>
+
 
 ### Clustering Algorithms Overview
 
@@ -115,7 +129,7 @@ The Elbow Method plots the Within-Cluster Sum of Squares (WCSS) versus number of
 - DBSCAN (density-based)
 - K-Medoids and others
 
-
+<br><br>
 
 ## Step-by-Step K-Means Implementation
 
@@ -123,9 +137,10 @@ The Elbow Method plots the Within-Cluster Sum of Squares (WCSS) versus number of
 
 ### Libraries Import and Dataset Loading
 
-<br>
+<br><br>
 
-```
+
+```python
 # Import necessary libraries
 
 # Importar bibliotecas necessárias
@@ -166,7 +181,9 @@ df_norm = pd.DataFrame(scaler.fit_transform(df_cluster), columns=df_cluster.colu
 print(df_norm.head())  \# Preview normalized data / visualizar dados normalizados
 ```
 
-<br>
+
+<br><br>
+
 
 ### Scatter Plot of Raw Data (Dark Mode, Turquoise Palette)
 
@@ -185,7 +202,7 @@ plt.show()
 ```
 
 
-
+<br><br>
 
 
 
