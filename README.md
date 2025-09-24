@@ -275,7 +275,28 @@ plt.show()
 <br><br>
 
 
+### Scatter Plot with Gender Legend and Cluster Styles
 
+<br>
+
+```python
+# Scatter plot with Gender as the legend and points styled by cluster
+
+# Scatter plot com gênero na legenda e estilo pelos clusters
+
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=df, x='Annual Income (k\$)', y='Spending Score (1-100)',
+hue='Gender', style='Cluster', palette=palette)
+plt.title('Annual Income vs Spending Score by Gender and Cluster')
+plt.show()
+
+```
+
+<br><br>
+
+### Cluster Statistics
+
+<br>
 
 
 
