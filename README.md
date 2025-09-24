@@ -299,6 +299,92 @@ plt.show()
 <br>
 
 
+<!--
+
+```
+
+
+# Show descriptive statistics per cluster group
+
+# Mostrar estatísticas descritivas por cluster
+
+cluster_stats = df.drop(['CustomerID', 'Age'], axis=1).groupby('Cluster').describe()
+print(cluster_stats)
+
+```
+
+---
+
+### Display Centroid Coordinates
+
+```
+
+
+# Show coordinates of cluster centroids (in normalized scale)
+
+# Mostrar coordenadas dos centróides dos clusters (normalizado)
+
+print(kmeans_model.cluster_centers_)
+
+```
+
+---
+
+### Silhouette Score for Cluster Validation
+
+```
+
+from sklearn.metrics import silhouette_score
+
+# Silhouette score calculation for k=5
+
+# Cálculo da silhueta para k=5
+
+sil_score = silhouette_score(df_norm, clusters)
+print(f'Silhouette Score for k=5: {sil_score:.3f}')
+
+```
+
+---
+
+### Silhouette Scores for k=2 to k=10
+
+```
+
+
+# Silhouette scores for k=2 to k=10 to validate cluster choice
+
+# Calcular pontuação da silhueta para k=2 a k=10
+
+for n_clusters in range(2, 11):
+model = KMeans(n_clusters=n_clusters, random_state=42)
+preds = model.fit_predict(df_norm)
+score = silhouette_score(df_norm, preds)
+print(f'Silhouette Score for {n_clusters} clusters: {score:.3f}')
+
+```
+
+---
+
+## Conclusions
+
+The K-Means algorithm clustered the dataset into 5 groups with different profiles based on Annual Income and Spending Score, considering Gender as an additional categorical feature for visualization. The Elbow and Silhouette methods helped validate the choice of clusters.
+
+---
+
+# Repository Directory Suggestion
+
+- README.md (this file)
+- clientes-shopping.csv (dataset)
+- kmeans_implementation.ipynb (Jupyter notebook with code)
+- requirements.txt (for dependencies)
+
+---
+
+This README.md provides a complete educational and practical tutorial for K-Means clustering, balancing theory and practice with clear bilingual explanations and high-quality visualizations.
+
+-->
+
 
 
 
