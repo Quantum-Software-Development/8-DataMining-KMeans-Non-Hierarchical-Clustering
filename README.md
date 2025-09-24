@@ -117,6 +117,72 @@ The Elbow Method plots the Within-Cluster Sum of Squares (WCSS) versus number of
 
 
 
+## Step-by-Step K-Means Implementation
+
+<br>
+
+### Libraries Import and Dataset Loading
+
+<br>
+
+```
+# Import necessary libraries
+
+# Importar bibliotecas necessárias
+
+import pandas as pd  \# for data handling / para manipulação de dados
+import matplotlib.pyplot as plt  \# for plotting / para plotagem
+import seaborn as sns  \# enhanced visualization / visualização aprimorada
+from sklearn.cluster import KMeans  \# KMeans algorithm / algoritmo KMeans
+from sklearn.preprocessing import MinMaxScaler  \# normalization / normalização
+
+# Load dataset
+
+# Carregar o dataset
+
+df = pd.read_csv('clientes-shopping.csv')
+print(df.head())  \# Show first rows / mostrar primeiras linhas
+
+```
+
+<br><br>
+
+### Data Preprocessing and Normalization
+
+```python
+# Drop unnecessary columns: CustomerID, Gender, Age for clustering
+
+# Remover colunas irrelevantes para clusterização
+
+df_cluster = df.drop(['CustomerID', 'Gender', 'Age'], axis=1)
+
+# Normalize the features with MinMaxScaler
+
+# Normalizar características usando MinMaxScaler
+
+scaler = MinMaxScaler()
+df_norm = pd.DataFrame(scaler.fit_transform(df_cluster), columns=df_cluster.columns)
+
+print(df_norm.head())  \# Preview normalized data / visualizar dados normalizados
+```
+
+<br>
+
+### Scatter Plot of Raw Data (Dark Mode, Turquoise Palette)
+
+```python
+# Scatter plot of Annual Income vs Spending Score, colored by Gender
+
+# Scatter plot de Renda Anual vs Score de Gastos com legenda por Gênero
+
+sns.set_style('dark')
+palette = sns.color_palette('turquoise', 3)
+
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=df, x='Annual Income (k\$)', y='Spending Score (1-100)', hue='Gender', palette=palette)
+plt.title('Annual Income vs Spending Score by Gender')
+plt.show()
+```
 
 
 
